@@ -1,0 +1,532 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*Classes Auxiliares*/
+
+.container{
+	max-width: 1280px;
+	padding: 0 auto;
+	margin: 0 2%;
+}
+
+.clear{clear:both;}
+
+.w50{
+	width: 50%;
+	float: left;
+}
+
+.w33{
+	width: 33.3%;
+	float: left;
+}
+
+/*Classes do meu site*/
+
+header{
+	padding: 8px 0;
+	background-color: #333; /*cor base para a tríade #F0E165*/
+}
+
+.logo{
+	float: left;
+	cursor: pointer;
+}
+
+.logo a{
+	text-decoration: none;
+	color: #F04D93; 
+}
+
+nav.menu-mobile{
+	display: none;
+	float: right;	
+}
+
+nav.menu-mobile h2{
+	cursor: pointer;
+	color: #706A2F;
+}
+
+nav.menu-mobile ul{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 52px;
+	left: 0;
+	background: #333;
+	z-index: 999; /*só para garantir que fique em cima de tudo*/
+	text-align: center;
+}
+
+nav.menu-mobile a{
+	display: block;
+	color: #706A2F;
+	text-decoration: none;
+}
+
+nav.menu-mobile li{
+	padding: 8px 0;
+	border-bottom: 1px solid black;
+}
+
+nav.menu-mobile li.selected{
+	background: rgb(225,225,225);
+}
+
+nav.menu-mobile a:hover{
+	color: #4024A3;
+}
+
+nav.menu-mobile li:hover{
+	background: grey;
+}
+
+nav.menu-desktop{
+	float: right;
+	position: relative;
+	top: 8px;
+}
+
+nav.menu-desktop li{
+	font-weight: lighter;
+	display: inline-block;
+}
+
+nav.menu-desktop li.selected{
+	font-weight: normal;
+}
+
+nav.menu-desktop a{
+	padding: 0 10px;
+	color: #706A2F;
+	text-decoration: none;
+}
+
+nav.menu-desktop i{
+	color: #4024A3;
+}
+
+nav.menu-desktop a:hover{
+	color: #4024A3;
+}
+
+nav.menu-desktop li:hover{
+	transform: scale(1.2);
+}
+
+/*Sessão main*/
+
+.main-bg{
+	width: 100%;
+	padding: 250px 0;
+	background-image: url('../images/banner0.jpg');/*cores estavam para banner1*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, white 25%, grey);
+	left: 0;
+	top: 0;
+	opacity: 0.3;
+}
+
+section.main-bg > .container{
+	position: relative;
+	z-index: 1;
+	margin-bottom: -200px;
+	background-color: rgb(0,0,0,0.5);
+	width: 300px;
+	padding: 5px;
+}
+
+section.main-bg h3{
+	color: #818A71;/*cor para banner1*/
+	color: white;/*cor para banner0*/
+	z-index: 2;
+}
+
+section.main-bg h3:nth-child(2){
+	padding-bottom: 10px;
+	z-index: 2;
+}
+
+section.main-bg h2{
+	color: #4024A3;/*cor para banner1*/
+	color: #F04D93;/*cor para banner0*/
+	z-index: 2;
+}
+
+.main-bg a{
+	text-decoration: none;
+}
+
+section.main-bg p{
+	color: #706D51;/*cor para banner1*/
+	color: white;/*cor para banner0*/
+	z-index: 2;
+}
+
+/*Sessão Diferenciais*/
+
+section.diferenciais{
+	padding: 30px 0;
+	text-align: center;
+}
+
+.line-text{
+	color: #706A2F;
+	padding-bottom: 40px;
+}
+
+.line-text > div{
+	border-style: solid;
+	border-width: 2px;
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+}
+
+.box-icone-single{
+	float: left;
+	width: 33.3%;
+	padding: 0 10px;
+	color: #706A2F;
+	padding-bottom: 20px;
+}
+
+.box-icone-single:hover{
+	color: #4024A3;
+}
+
+.box-icone-single i{
+	transform: scale(3,3);
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.box-icone-single i:hover{
+	color: #4024A3;
+}
+
+
+/*Sobre Doutora*/
+
+section.sobre-doutora{
+	background-color: #F2EBAE;
+	padding-bottom: 30px;
+}
+
+section.sobre-doutora > .container{
+	padding: 30px 2%;
+}
+
+.foto-container{
+	float: left;
+	text-align: center;
+}
+
+.sobre-container{
+	float: left;
+	padding-left: 2%;
+}
+
+.sobre-container h1{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.sobre-container p{
+	margin-bottom: 10px;
+}
+
+.sobre-container input{
+	margin-top: 10px;
+	border-radius: 8px;
+	border-width: 1px;
+	padding: 2px 5px;
+	background-color: white;
+	color: #706A2F;
+	cursor: pointer;
+}
+
+.sobre-container input:hover{
+	background-color: #4024A3;
+	color: white;
+	transition: .3s
+}
+
+/*Depoimentos*/
+
+section.depoimentos{
+	background: white;
+	padding: 30px;
+}
+
+.depoimento-single{
+	display: inline-block;
+	font-weight: lighter;
+	text-align: center;
+	padding: 0 30px;
+	color: #706A2F;
+}
+
+.depoimento-single:nth-child(2){
+	border-right: 1px dashed grey;
+}
+
+.depoimento-single:nth-child(3){
+	border-right: 1px dashed grey;
+}
+
+.depoimento-single i{
+	transform: scale(2,2);
+	padding: 20px;
+}
+
+/*Consultório*/
+
+section.consultorio{
+	background-color: #7DDDF0;
+	padding: 30px 0;
+}
+
+section.consultorio > .banner-consultorio1{
+	max-width: 750px;
+	margin: 0 auto;
+	height: 400px;
+	background-color: #7DDDF0;
+	background-image: url("../images/consultorio1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 30px;
+}
+
+section.consultorio > .banner-consultorio2{
+	max-width: 750px;
+	margin: 0 auto;
+	height: 400px;
+	background-color: #7DDDF0;
+	background-image: url("../images/consultorio2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 30px;
+}
+
+
+section.consultorio > .banner-consultorio3{
+	max-width: 750px;
+	margin: 0 auto;
+	height: 400px;
+	background-color: #7DDDF0;
+	background-image: url("../images/consultorio3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+/*Contato*/
+section.contato{
+	padding: 30px 0;
+}
+
+section.contato h3{
+	color: #706A2F;
+}
+
+.endereço-container{
+	text-align: center;
+	padding: 0 30px;
+	border-right: dashed 1px grey;
+}
+
+.contato-container{
+	text-align: center;
+	display: inline-block;
+
+}
+
+.contato-container i{
+	margin: 10px 0;
+	padding: 5px 0px 5px 10px;
+	cursor: pointer;
+	display: inline-block;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 3px;
+	border-width: 1px;
+	background-color: #34af23;
+}
+
+.contato-container i > a{
+	text-decoration: none;
+	display: inline-block;
+	width: 230px;
+	font-weight: bold;
+	cursor: pointer;
+	color: rgb(255,255,255);
+	font-size: 20px;
+	background-color: #34af23;
+	border-width: 0px;
+	padding-left: 3px;
+}
+
+.mapa{
+	text-align: center;
+	width: 100%;
+	padding: 0 2%;
+	margin-top: 30px;
+}
+
+/*Footer*/
+
+footer{
+	text-align: right;
+	padding: 10px 2%;
+	background-color: #8934A3;
+	color: white;
+	font-weight: normal;
+}
+
+/*-------------------------------------Página Sobre--------------------------*/
+
+section.banner-sobre{
+	background-color: #F2EBAE;
+	width: 100%;
+	height: 180px;
+	position: relative;
+	z-index: 0;
+	padding: 60px;
+}
+
+.texto-banner-sobre{
+	padding: 40px 2% 20px 2%;
+	position: relative;
+	z-index: 2;
+	color: #706A2F;
+	text-align: center;
+}
+
+.icone-sobre{
+	float: center;
+	text-align: center;
+	z-index: 1;
+	color: #706A2F;	
+}
+
+.icone-sobre i{
+	transform: scale(4,4);
+}
+
+/*------------------*/
+
+section.container-sobre{
+	background-color: white;
+	padding: 30px 2%;
+
+}
+
+.sobre-single img{
+	max-width: 50%;
+	float: left;
+}
+
+.sobre-single p{
+	width: 50%;
+	float: left;
+	padding-left: 2%;
+	text-align: justify;
+	color: #706A2F;
+}
+
+.sobre-single p:nth-child(3){
+	padding-top: 10px;
+	font-weight: bold;
+	text-align: right;
+}
+
+/*querys*/
+
+@media screen and (max-width: 1024px){
+	.depoimento-single{
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.depoimento-single:nth-child(2){
+		border-right: 0px dashed grey;
+	}
+
+	.depoimento-single:nth-child(3){
+		border-right: 0px dashed grey;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.sobre-single img{
+	max-width: 100%;
+	}
+	.sobre-single p{
+	width: 100%;
+	margin-top: 15px;
+	padding: 0 0;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.box-icone-single{
+		width: 100%;
+		padding-bottom: 80px;
+	}
+	.main-bg > .container{
+		bottom: -100px;
+	}
+	.foto-container{
+		width: 100%;
+	}
+	.sobre-container{
+		width: 100%;
+		text-align: center;
+	}	
+	.mapa iframe{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 667px){
+	.endereço-container{
+		width: 100%;
+		border-right: dashed 0px grey;
+	}
+	.contato-container{
+		width: 100%;
+		padding-top: 10px;
+	}
+	footer{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 600px){
+	nav.menu-desktop{
+		display: none;
+	}
+	nav.menu-mobile{
+		display: block;
+	}
+	header{
+		border-bottom: 1px solid black;
+	}
+}
